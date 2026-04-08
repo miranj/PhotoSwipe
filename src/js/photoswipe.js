@@ -737,9 +737,10 @@ class PhotoSwipe extends PhotoSwipeBase {
     this.element.setAttribute('tabindex', '-1');
     this.element.setAttribute('role', 'dialog');
     this.element.setAttribute('aria-modal', 'true');
-    if (this.options.ariaLabel) {
-      this.element.setAttribute('aria-label', this.options.ariaLabel);
-    }
+    this.element.setAttribute(
+      'aria-label',
+      this.options?.ariaLabel || 'Full-size image gallery'
+    );
 
     // template is legacy prop
     this.template = this.element;

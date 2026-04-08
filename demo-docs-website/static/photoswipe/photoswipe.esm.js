@@ -7018,16 +7018,14 @@ class PhotoSwipe extends PhotoSwipeBase {
 
 
   _createMainStructure() {
+    var _this$options;
+
     // root DOM element of PhotoSwipe (.pswp)
     this.element = createElement('pswp', 'div');
     this.element.setAttribute('tabindex', '-1');
     this.element.setAttribute('role', 'dialog');
     this.element.setAttribute('aria-modal', 'true');
-
-    if (this.options.ariaLabel) {
-      this.element.setAttribute('aria-label', this.options.ariaLabel);
-    } // template is legacy prop
-
+    this.element.setAttribute('aria-label', ((_this$options = this.options) === null || _this$options === void 0 ? void 0 : _this$options.ariaLabel) || 'Full-size image gallery'); // template is legacy prop
 
     this.template = this.element; // Background is added as a separate element,
     // as animating opacity is faster than animating rgba()
