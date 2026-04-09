@@ -236,7 +236,6 @@ export type PreparedPhotoSwipeOptions = {
     children?: ElementProvider | undefined;
     childSelector?: string | undefined;
     thumbSelector?: string | false | undefined;
-    /* Accessibility */
     ariaLabel?: string | undefined;
 };
 /**
